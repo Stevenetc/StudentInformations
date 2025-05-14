@@ -17,17 +17,14 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa; /* Light background color */
+            background-image: url('~/images/background.jpg'); /* Set background image */
+            background-size: cover; /* Ensure the image covers the entire page */
+            background-position: center center; /* Center the background image */
         }
 
         /* Navbar styles */
         .navbar {
             background-color: #343a40 !important; /* Dark navbar for contrast */
-        }
-
-        /* Set different fonts for headings */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
         }
 
         .navbar-brand {
@@ -97,7 +94,10 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold me-auto" asp-area="" asp-controller="Home" asp-action="Index">Student Info</a>
+                <!-- Logo added here -->
+                <a class="navbar-brand fw-bold me-auto" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.png" alt="Student Info Logo" height="40"> Student Info
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -119,12 +119,16 @@
 
     <div class="container">
         <main role="main" class="pb-3">
+            <!-- Main content image -->
+            <img src="~/images/student-banner.jpg" alt="Student Banner" class="img-fluid rounded mb-4">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
+            <!-- Footer logo -->
+            <img src="~/images/footer-logo.png" alt="Footer Logo" height="20" />
             &copy; 2025 - StudentInformation - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
